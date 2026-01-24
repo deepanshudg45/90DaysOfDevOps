@@ -12,7 +12,8 @@ I am a **B.Tech Computer Science and Engineering fresher** with hands-on knowled
 - Frontend technologies: HTML, CSS, JavaScript, React  
 - Programming languages: C++ and Python  
 
-I shifted my focus to **Cloud and DevOps during my final year**, especially around placement season. While most of my peers were preparing only for traditional software or web development roles, I was still figuring out what genuinely interested me. By the last semester, I finally decided to follow my interest and move toward Cloud, DevOps, infrastructure, and servers, a decision made consciously, not randomly.
+I shifted my focus to **Cloud and DevOps during my final year**, especially around placement season. While most of my peers were preparing only for traditional software or web development roles, I was still figuring out what genuinely interested me. By the last semester, I finally decided to follow my interest and move toward Cloud, DevOps, infrastructure, and servers - a decision made consciously, not randomly.
+
 
 ## My Understanding of Cloud & DevOps
 
@@ -40,17 +41,17 @@ It is a **mindset** that bridges the gap between development and operations to d
 
 The real goal of DevOps is to **build, ship, and operate software without breaking things**, while still moving fast.
 
+
 ## Why I Am Learning Cloud & DevOps (Honestly)
 
 I don’t get excited by standard or repetitive software and web development work that most engineering students follow by default.
 
 When I first heard about Cloud and DevOps, it genuinely sounded different. I started researching it, and my interest kept increasing. To test whether this was real interest or just hype, I watched a full AWS one-shot video and tried to understand what cloud actually is, not just buzzwords.
 
-I liked it.
-
 Coming from a **Tier-3 City**, the tech culture around advanced roles like Cloud, DevOps, Data Scientist, System Admin, or Infra Engineering is very limited. Even in my college, discussions were mostly limited to web development or generic software roles. That lack of exposure made me want to explore deeper and do something different.
 
 Cloud and DevOps felt challenging, practical, and meaningful, so I decided to commit to it seriously.
+
 
 ## Where I Want to Reach (90-Day Outcome)
 
@@ -64,7 +65,6 @@ That means:
 
 Most importantly, I want to understand **how things work internally**, not just how to use tools. I should be able to explain these concepts clearly to others and defend my decisions in interviews.
 
-Avoiding shallow knowledge is a priority.
 
 ## Clear Goals for the Next 90 Days
 
@@ -76,6 +76,7 @@ Avoiding shallow knowledge is a priority.
 
 3. **Be interview-ready for entry-level Cloud / DevOps roles**  
    With strong hands-on projects and the confidence to explain what I built and why.
+   
 
 ## Core DevOps Skills I Will Build
 
@@ -87,8 +88,9 @@ Avoiding shallow knowledge is a priority.
 
 3. **Containers & Kubernetes**  
    Docker fundamentals, Kubernetes deployments, and debugging real-world issues.
+   
 
-## Weekly Time Budget (Realistic)
+## Weekly Time Budget
 
 - **Weekdays:** 3-4 hours/day (learning + hands-on practice)  
 - **Weekends:** 4–6 hours/day (classes, projects, revision)  
@@ -97,7 +99,8 @@ Avoiding shallow knowledge is a priority.
 
 Quality matters more than overloading myself.
 
-## How I’ll Stay Consistent (No Excuses)
+
+## How I’ll Stay Consistent
 
 - **No zero days** — minimum 30 minutes, even on bad days  
 - Track progress through:
@@ -109,8 +112,8 @@ Quality matters more than overloading myself.
 
 Consistency beats motivation. Every single time.
 
+
 ## Final Note
 
-This journey is not about perfection or certificates.
-
+This journey is not about perfection or surface-level learning.
 It is about building real systems, breaking them, fixing them, and becoming someone who can be trusted with infrastructure and production environments.
