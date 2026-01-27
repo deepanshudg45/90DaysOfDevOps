@@ -37,7 +37,6 @@ Programs in user space cannot directly access hardware. They must request the ke
 **Why this matters:**  
 If an application crashes, the kernel remains safe and the system continues running.
 
----
 
 ## 3. System Libraries – The Middle Layer
 
@@ -114,6 +113,8 @@ Examples:
 - `ps` – process status
 - `mount` – filesystem mounting
 
+---
+
 # Applications of Linux Operating System
 
 ### 1. Servers and Hosting
@@ -126,6 +127,7 @@ Examples:
 
 ### 5. Embedded Systems
 
+---
 
 # 2. How Processes Are Created and Managed
 
@@ -164,6 +166,7 @@ Zombie processes do not consume CPU, but many zombies indicate poor process mana
 - `free -h` – check memory usage
 - `ip a` – check network interfaces and IP addresses
 
+---
 
 # Q3. What systemd Does and Why It Matters
 
