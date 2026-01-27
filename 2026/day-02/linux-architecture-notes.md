@@ -95,7 +95,6 @@ This layer includes:
 
 Hardware is accessed only through kernel drivers. Applications never interact with hardware directly.
 
----
 
 ## 7. System Utilities – Admin Tools
 
@@ -168,7 +167,7 @@ Zombie processes do not consume CPU, but many zombies indicate poor process mana
 
 ---
 
-# Q3. What systemd Does and Why It Matters
+# 3. What systemd Does and Why It Matters
 
 ## What systemd Does
 systemd is the init system and service manager used by modern Linux distributions.
