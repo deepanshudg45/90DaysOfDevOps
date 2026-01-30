@@ -1,4 +1,4 @@
-# Linux Cheat Sheet – Day 3
+# Linux Cheat Sheet –
 
 A practical Linux command reference focused on **process management**,  
 **file system operations**, and **network troubleshooting**.
@@ -109,8 +109,3 @@ A practical Linux command reference focused on **process management**,
 ## 📝 Notes
 - Prefer `ip` and `ss` over deprecated tools like `ifconfig` and `netstat`
 - Avoid `kill -9` unless the process is unresponsive
-- These commands are **daily-use tools in production environments**
-
----
-
-🎯 **Goal:** Build confidence and muscle memory with core Linux commands.
