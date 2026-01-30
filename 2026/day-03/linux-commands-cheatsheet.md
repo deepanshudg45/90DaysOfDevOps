@@ -1,4 +1,4 @@
-# Linux Cheat Sheet –
+# Linux Cheat Sheet
 
 A practical Linux command reference focused on **process management**,  
 **file system operations**, and **network troubleshooting**.
