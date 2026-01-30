@@ -8,7 +8,6 @@ The goal of Day 04 was to **practice Linux fundamentals hands-on** by working wi
 
 This task focuses on **observation and troubleshooting basics**, not theory.
 
----
 
 ## What I Practiced
 
@@ -80,6 +79,8 @@ When a service is not working, I followed this basic flow:
    top
 
 This approach avoids guesswork and focuses on facts.
+
+---
 
 ## Command Output & Reference
 
