@@ -23,7 +23,7 @@ uname -a
 **Output / Screenshot:**
 
 ```
-< paste uname output here >
+< /images/uname >
 ```
 
 ---
