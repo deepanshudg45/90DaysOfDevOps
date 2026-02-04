@@ -23,7 +23,7 @@ uname -a
 **Output / Screenshot:**
 
 ```
-< /images/uname >
+!(images/uname)
 ```
 
 ---
