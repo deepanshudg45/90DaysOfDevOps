@@ -1,36 +1,57 @@
-# Day-05 Linux Troubleshooting Runbook
+# Linux Troubleshooting Drill (Docker)
 
-## Target service / process
+> **Goal:** Build a repeatable, production-style troubleshooting routine covering CPU, memory, disk, network, and logs.
+
+---
+
+## Target Service
 
 * **Service:** docker
-* **Main process:** dockerd (PID 358)
+* **Main process:** dockerd
 * **Environment:** Ubuntu 24.04.1 LTS on WSL2
 
 ---
 
-## Environment basics
+## 1. Environment Basics
 
-### uname
+### 1.1 Kernel & system info
 
 ```bash
 uname -a
-Linux LAPTOP-BVJ1PIP 6.6.87.2-microsoft-standard-WSL2 x86_64 GNU/Linux
 ```
 
-**Observation:** Running on WSL2 kernel; behavior differs slightly from bare-metal Linux (IO, networking).
+**Output / Screenshot:**
 
-### OS release
-
-```bash
-lsb_release -a
-cat /etc/os-release
 ```
-
-**Observation:** Ubuntu 24.04.1 LTS (Noble). Supported and stable.
+< paste uname output here >
+```
 
 ---
 
-## Filesystem sanity
+### 1.2 OS details
+
+```bash
+lsb_release -a
+```
+
+```bash
+cat /etc/os-release
+```
+
+**Output / Screenshot:**
+
+```
+< paste OS release output here >
+```
+
+**Notes:**
+
+* Confirm OS version is supported and not EOL
+* WSL2 kernel behaves differently from bare metal (important for IO & networking)
+
+---
+
+## 2. Filesystem Sanity Check
 
 ```bash
 mkdir /tmp/runbook-demo
@@ -38,164 +59,255 @@ cp /etc/hosts /tmp/runbook-demo/hosts-copy-file
 ls -l /tmp/runbook-demo
 ```
 
-**Observation:** Filesystem writable, permissions normal, no IO errors.
+**Output / Screenshot:**
+
+```
+< paste ls -l output here >
+```
+
+**Notes:**
+
+* Confirms disk is writable
+* Rules out basic filesystem or permission issues
 
 ---
 
-## Snapshot: CPU & Memory
+## 3. CPU & Memory Snapshot
 
-### top
+### 3.1 Overall system usage
 
 ```bash
 top
 ```
 
-**Observation:**
+**Output / Screenshot:**
 
-* Load average ~0.02
-* dockerd using ~0.3% CPU
-* Plenty of idle CPU
+```
+< paste top output or screenshot >
+```
 
-### Process usage
+**What to check:**
+
+* Load average
+* dockerd CPU usage
+* Idle CPU percentage
+
+---
+
+### 3.2 Process-level usage
 
 ```bash
+ps aux | grep dockerd
 ps -o pid,pcpu,pmem,comm -p $(pidof dockerd)
 ```
 
-**Observation:** dockerd ~0.9% memory, negligible CPU.
+**Output / Screenshot:**
 
-### Memory availability
+```
+< paste ps output here >
+```
+
+**Notes:**
+
+* Confirms which PID is dockerd
+* Validates CPU & memory consumption
+
+---
+
+### 3.3 Memory availability
 
 ```bash
 free -h
 ```
 
-**Observation:**
+**Output / Screenshot:**
 
-* 7.5Gi total RAM
-* ~6.8Gi available
-* Swap unused → no memory pressure
+```
+< paste free -h output here >
+```
+
+**Notes:**
+
+* Check available memory
+* Ensure swap is not heavily used
 
 ---
 
-## Snapshot: Disk & IO
+## 4. Disk & IO Health
 
-### Disk usage
+### 4.1 Disk usage
 
 ```bash
 df -h
 ```
 
-**Observation:**
+**Output / Screenshot:**
 
-* Root filesystem ~1% used
-* Host Windows disk mounted at /mnt/c ~78% used (not critical for Linux FS)
-* Snap mounts show 100% usage (normal for snapfs)
+```
+< paste df -h output here >
+```
 
-### Log directory size
+**Notes:**
+
+* Ignore snapfs 100% usage (expected)
+* Focus on root filesystem and /var
+
+---
+
+### 4.2 Log directory size
 
 ```bash
 sudo du -sh /var/log
 ```
 
-**Observation:** ~384MB logs. Acceptable, but rotation should be monitored.
+**Output / Screenshot:**
 
-### IO stats
+```
+< paste du output here >
+```
+
+**Notes:**
+
+* Large log growth can cause disk pressure
+* Verify log rotation is working
+
+---
+
+### 4.3 IO statistics
 
 ```bash
 iostat
+vmstat 1
 vmstat 1 5
 dstat -cdnm
 ```
 
-**Observation:**
+**Output / Screenshot:**
 
-* IO wait ~0%
-* CPU mostly idle
-* No disk contention or swap activity
+```
+< paste iostat/vmstat/dstat output here >
+```
+
+**Notes:**
+
+* Check IO wait
+* Ensure no swap-in or swap-out activity
 
 ---
 
-## Snapshot: Network
+## 5. Network Checks
 
-### Listening sockets
+### 5.1 Listening sockets
 
 ```bash
+sudo ss -tulpn | grep docker
 sudo ss -lx | grep docker
 ```
 
-**Observation:**
+**Output / Screenshot:**
 
-* dockerd listening only on Unix sockets
-* No exposed TCP ports (good security posture)
+```
+< paste ss output here >
+```
 
-### Docker API health
+**Notes:**
+
+* Docker should listen only on Unix sockets
+* No unexpected exposed TCP ports
+
+---
+
+### 5.2 Docker API health
 
 ```bash
 curl --unix-socket /var/run/docker.sock http://localhost/_ping
 ```
 
-**Observation:** Docker API responds with `OK`.
+**Output / Screenshot:**
+
+```
+< paste curl output here >
+```
+
+**Expected:** `OK`
 
 ---
 
-## Logs reviewed
+## 6. Log Analysis
 
-### Docker service logs
+### 6.1 Docker service logs
 
 ```bash
 journalctl -u docker -n 50
 ```
 
-**Observation:**
+**Output / Screenshot:**
 
-* Successful startup
-* Repeated warnings about CDI setup and containerd events
-* No crash loop
+```
+< paste journalctl output here >
+```
 
-### System logs
+**Notes:**
+
+* Look for crash loops or repeated restarts
+* Warnings are acceptable if service is stable
+
+---
+
+### 6.2 System logs
 
 ```bash
 tail -n 50 /var/log/syslog
 ```
 
-**Observation:**
+**Output / Screenshot:**
 
-* Frequent WSL-related warnings (Windows agent connectivity)
-* Not directly related to docker health
+```
+< paste syslog output here >
+```
 
----
+**Notes:**
 
-## Quick findings
-
-* System is healthy and idle
-* dockerd resource usage is normal
-* Disk, memory, and IO show no pressure
-* Docker warnings are known WSL/CDI related and non-fatal
+* WSL-related warnings are expected
+* Confirm no docker-related fatal errors
 
 ---
 
-## If this worsens (next steps)
+## 7. Quick Findings
 
-1. **Containment**
+* System is healthy and mostly idle
+* dockerd resource usage is minimal
+* No CPU, memory, disk, or IO pressure
+* Docker responding correctly to API checks
+* Observed warnings are non-fatal
 
-   ```bash
-   systemctl restart docker
-   ```
+---
+
+## 8. If This Worsens (Next Steps)
+
+1. **Immediate containment**
+
+```bash
+systemctl restart docker
+```
 
 2. **Deeper diagnostics**
 
-   ```bash
-   docker stats
-   dockerd --debug
-   ```
+```bash
+docker stats
+dockerd --debug
+```
 
-3. **Root cause analysis**
+3. **Advanced troubleshooting**
 
-   * Inspect container logs
-   * Enable higher log verbosity
-   * Capture `strace` on dockerd if CPU spikes
+* Inspect container logs
+* Capture `strace` on dockerd
+* Review container restart behavior
 
 ---
 
-**Status:** Runbook complete and reusable for on-call troubleshooting.
+## Status
+
+✅ Day-05 Linux Troubleshooting Drill completed
+
+This runbook can be reused during real incidents and extended for other services (nginx, ssh, databases).
