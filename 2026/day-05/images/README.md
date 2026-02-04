@@ -1,1 +1,1 @@
-### Uploaded image output of linux troubleshooting drill
+### Uploaded images showing the output of the linux troubleshooting drill
