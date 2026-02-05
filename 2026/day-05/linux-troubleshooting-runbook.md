@@ -22,7 +22,7 @@ uname -a
 
 **Output / Screenshot:**
 
-![uname output](images/uname-os.png)
+![uname output](./images/uname-os.png)
 
 ---
 
