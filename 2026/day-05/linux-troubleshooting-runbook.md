@@ -98,9 +98,8 @@ ps -o pid,pcpu,pmem,comm -p $(pidof dockerd)
 
 **Output / Screenshot:**
 
-```
-< paste ps output here >
-```
+![uname output](./images/ps-docker.png)
+
 
 **Notes:**
 
@@ -117,9 +116,8 @@ free -h
 
 **Output / Screenshot:**
 
-```
-< paste free -h output here >
-```
+![uname output](./images/free.png)
+
 
 **Notes:**
 
@@ -138,9 +136,8 @@ df -h
 
 **Output / Screenshot:**
 
-```
-< paste df -h output here >
-```
+![uname output](./images/disk df.png)
+
 
 **Notes:**
 
