@@ -299,8 +299,5 @@ dockerd --debug
 
 ---
 
-## Status
-
-✅ Day-05 Linux Troubleshooting Drill completed
 
 This runbook can be reused during real incidents and extended for other services (nginx, ssh, databases).
