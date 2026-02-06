@@ -38,9 +38,8 @@ cat /etc/os-release
 
 **Output / Screenshot:**
 
-```
-< paste OS release output here >
-```
+![uname output](./images/uname-os.png)
+
 
 **Notes:**
 
@@ -59,9 +58,8 @@ ls -l /tmp/runbook-demo
 
 **Output / Screenshot:**
 
-```
-< paste ls -l output here >
-```
+![uname output](./images/runbook-demo.png)
+
 
 **Notes:**
 
@@ -80,9 +78,8 @@ top
 
 **Output / Screenshot:**
 
-```
-< paste top output or screenshot >
-```
+![uname output](./images/top.png)
+
 
 **What to check:**
 
