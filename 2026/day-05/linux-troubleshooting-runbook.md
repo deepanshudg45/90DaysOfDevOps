@@ -136,7 +136,7 @@ df -h
 
 **Output / Screenshot:**
 
-![uname output](./images/disk df.png)
+![uname output](./images/disk-df.png)
 
 
 **Notes:**
@@ -154,9 +154,7 @@ sudo du -sh /var/log
 
 **Output / Screenshot:**
 
-```
-< paste du output here >
-```
+![](./images/disk-du.png)
 
 **Notes:**
 
