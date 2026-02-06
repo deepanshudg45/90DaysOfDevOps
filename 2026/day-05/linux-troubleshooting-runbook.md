@@ -22,7 +22,7 @@ uname -a
 
 **Output / Screenshot:**
 
-![uname output](./images/uname-os.png)
+![](./images/uname-os.png)
 
 ---
 
@@ -38,7 +38,7 @@ cat /etc/os-release
 
 **Output / Screenshot:**
 
-![uname output](./images/uname-os.png)
+![](./images/uname-os.png)
 
 
 **Notes:**
@@ -58,7 +58,7 @@ ls -l /tmp/runbook-demo
 
 **Output / Screenshot:**
 
-![uname output](./images/runbook-demo.png)
+![](./images/runbook-demo.png)
 
 
 **Notes:**
@@ -78,7 +78,7 @@ top
 
 **Output / Screenshot:**
 
-![uname output](./images/top.png)
+![](./images/top.png)
 
 
 **What to check:**
@@ -98,7 +98,7 @@ ps -o pid,pcpu,pmem,comm -p $(pidof dockerd)
 
 **Output / Screenshot:**
 
-![uname output](./images/ps-docker.png)
+![](./images/ps-docker.png)
 
 
 **Notes:**
@@ -116,7 +116,7 @@ free -h
 
 **Output / Screenshot:**
 
-![uname output](./images/free.png)
+![](./images/free.png)
 
 
 **Notes:**
@@ -136,7 +136,7 @@ df -h
 
 **Output / Screenshot:**
 
-![uname output](./images/disk-df.png)
+![](./images/disk-df.png)
 
 
 **Notes:**
@@ -174,9 +174,16 @@ dstat -cdnm
 
 **Output / Screenshot:**
 
-```
-< paste iostat/vmstat/dstat output here >
-```
+![](./images/iostat.png)
+![](./images/vmstat.png)
+![](./images/vmstat-1.png)
+![](./images/vmstat-15.png)
+![](./images/dstat.png)
+![](./images/dstat-cdnm.png)
+
+
+
+
 
 **Notes:**
 
@@ -196,9 +203,8 @@ sudo ss -lx | grep docker
 
 **Output / Screenshot:**
 
-```
-< paste ss output here >
-```
+![](./images/ss-tulpn.png)
+
 
 **Notes:**
 
@@ -215,9 +221,8 @@ curl --unix-socket /var/run/docker.sock http://localhost/_ping
 
 **Output / Screenshot:**
 
-```
-< paste curl output here >
-```
+![](./images/curl.png)
+
 
 **Expected:** `OK`
 
@@ -233,9 +238,8 @@ journalctl -u docker -n 50
 
 **Output / Screenshot:**
 
-```
-< paste journalctl output here >
-```
+![](./images/journalctl.png)
+
 
 **Notes:**
 
@@ -252,9 +256,8 @@ tail -n 50 /var/log/syslog
 
 **Output / Screenshot:**
 
-```
-< paste syslog output here >
-```
+![](./images/tail.png)
+
 
 **Notes:**
 
