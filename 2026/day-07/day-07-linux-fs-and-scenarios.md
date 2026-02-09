@@ -4,13 +4,11 @@
 Understand where critical files live in Linux and practice troubleshooting like a DevOps engineer.  
 Focus is on **real-world usage**, not theory.
 
----
 
 ## Part 1: Linux File System Hierarchy
 
 Linux uses a **single-root hierarchy**. Everything starts at `/`.
 
----
 
 ### `/` (Root)
 
@@ -146,27 +144,26 @@ Vendor or custom application directories
 **I would use this when:**  
 Installing external software without touching system directories.
 
----
 
-## Hands-On Commands & Evidence
+### Hands-On Commands & Evidence
 
 As part of this task, I executed the following commands on the system to validate my understanding of the Linux filesystem and to practice real-world troubleshooting.
 
-### Find largest log files
+**Find largest log files**
 ```bash
 du -sh /var/log/* 2>/dev/null | sort -h | tail -5
 ```
 
-### View system hostname
+**View system hostname**
 ```bash
 cat /etc/hostname
 ```
 
-### Inspect home directory
+**Inspect home directory**
 ```bash
 ls -la ~
 ```
-### 📸 Evidence (Screenshot Attached):###
+### 📸 Evidence (Screenshot Attached):
 The outputs of all the above commands were captured together in a single terminal session and are attached as one combined screenshot.
 
 ![](./images/day07-1.png)
@@ -227,6 +224,8 @@ Confirms whether the service exists and if the name is correct.
 **What I learned:**
 Always check status first, then logs, then boot configuration. Guessing wastes time.
 
+---
+
 ## Scenario 2: High CPU Usage ##
 
 **Problem:**
@@ -264,6 +263,8 @@ Helps understand what the process is doing and whether it belongs to the applica
 **What I learned:**
 Always identify the process before taking action. Killing processes blindly is dangerous.
 
+---
+
 ## Scenario 3: Finding Service Logs (systemd) ##
 
 **Problem:**
@@ -300,6 +301,8 @@ Useful when reproducing an issue and watching logs live.
 
 **What I learned:**
 systemd-managed services log to journald, not always to /var/log.
+
+---
 
 ### Scenario 4: File Permission Issue ###
 
@@ -346,6 +349,8 @@ Confirms the issue is resolved.
 
 **What I learned:**
 Permission issues are common and easy to fix once you check them systematically.
+
+---
 
 ## Overall Takeaways ##
 
