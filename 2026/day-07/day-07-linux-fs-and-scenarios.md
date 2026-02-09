@@ -179,7 +179,7 @@ The goal of this section is to practice **structured troubleshooting**.
 For each scenario, I focused on *what to check first, what to check next, and why*.
 
 
-## Scenario 1: Service Not Starting After Reboot
+## Scenario 1: Service Not Starting After Reboot ##
 
 **Problem:**  
 A web application service called `myapp` failed to start after a server reboot.
@@ -305,7 +305,7 @@ systemd-managed services log to journald, not always to /var/log.
 
 ---
 
-### Scenario 4: File Permission Issue ###
+## Scenario 4: File Permission Issue ##
 
 **Problem:**
 A script at /home/user/backup.sh fails with Permission denied.
