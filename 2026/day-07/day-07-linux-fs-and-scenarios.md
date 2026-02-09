@@ -144,6 +144,8 @@ Vendor or custom application directories
 **I would use this when:**  
 Installing external software without touching system directories.
 
+---
+
 
 ### Hands-On Commands & Evidence
 
@@ -176,7 +178,6 @@ The outputs of all the above commands were captured together in a single termina
 The goal of this section is to practice **structured troubleshooting**.  
 For each scenario, I focused on *what to check first, what to check next, and why*.
 
----
 
 ## Scenario 1: Service Not Starting After Reboot
 
