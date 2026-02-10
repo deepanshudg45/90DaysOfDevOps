@@ -4,7 +4,6 @@
 The objective of this task is to deploy a real web server on a cloud virtual machine, expose it securely to the internet, and extract server access logs.  
 This simulates basic real-world DevOps server provisioning.
 
----
 
 ## Prerequisites
 - AWS EC2 instance (Ubuntu 22.04 LTS)
@@ -26,9 +25,9 @@ This simulates basic real-world DevOps server provisioning.
 - **HTTP (Port 80)** – Allowed from `0.0.0.0/0`
 
 📸 **Screenshot:** EC2 instance running
+
 ![](./images/ec2running.png)
 
----
 
 ## Step 2: Connect to Server via SSH
 
@@ -40,12 +39,17 @@ ssh -i demo-iam-ec2-key.pem ubuntu@<PUBLIC_IP>
 Successful SSH login confirms server access.
 
 **📸 Screenshot:** SSH connection established
+
 ![](./images/ssh.png)
 
 ## Step 3: Update System Packages
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+
+**📸 Screenshot:** System Updated 
+
+![](./images/update.png)
 
 ## Step 4: Install and Verify Nginx
 ### Install Nginx
@@ -63,7 +67,7 @@ sudo systemctl status nginx
 Service state: active (running)
 ```
 **📸 Screenshot:**
-![](./images/update.png)
+
 ![](./images/nginx1.png)
 ![](./images/nginx2.png)
 
@@ -80,6 +84,7 @@ http://<PUBLIC_IP>
 The Nginx Welcome Page was displayed successfully
 
 **📸 Screenshot:** Nginx welcome page in browser
+
 ![](./images/nginx4.png)
 
 ## Step 6: View and Extract Nginx Logs
@@ -99,6 +104,7 @@ sudo cat /var/log/nginx/access.log > ~/nginx-logs.txt
 ```
 
 **📸 Screenshot:** Nginx log output
+
 ![](./images/nginx3.png)
 
 ## Step 7: Download Logs to Local Machine
@@ -117,6 +123,7 @@ scp -i demo-iam-ec2-key.pem ubuntu@<PUBLIC_IP>:~/nginx-logs.txt .
 cat nginx-logs.txt
 ```
 **📸 Screenshot:**
+
 ![](./images/scp.png)
 
 ## Commands Used
@@ -124,8 +131,8 @@ cat nginx-logs.txt
 * sudo apt update && sudo apt upgrade -y
 
 * sudo apt install nginx -y
-* 
-sudo systemctl status nginx
+
+* sudo systemctl status nginx
 
 * sudo cat /var/log/nginx/access.log
 
@@ -161,13 +168,3 @@ sudo systemctl status nginx
 4. Correct usage of SSH and SCP
 
 5. Difference between local and server execution context
-
----
-
-## Final Outcome
-
-Nginx successfully deployed and accessible from the internet
-
-Logs extracted and downloaded locally
-
-Documentation completed in a professional format
