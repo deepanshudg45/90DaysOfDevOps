@@ -157,22 +157,20 @@ Attach the following screenshots clearly labeled:
 
 ## Commands Summary
 
-```bash
-touch devops.txt
-echo "Linux permissions..." > notes.txt
-vim script.sh
-ls -l
-cat notes.txt
-vim -R script.sh
-head -n 5 /etc/passwd
-tail -n 5 /etc/passwd
-chmod +x script.sh
-chmod a-w devops.txt
-chmod 640 notes.txt
-mkdir project
-chmod 755 project
-chmod -x notes.txt
-```
+1. touch devops.txt
+2. echo "Linux permissions..." > notes.txt
+3. vim script.sh
+4. ls -l
+5. cat notes.txt
+6. vim -R script.sh
+7. head -n 5 /etc/passwd
+8. tail -n 5 /etc/passwd
+9. chmod +x script.sh
+10. chmod a-w devops.txt
+11. chmod 640 notes.txt
+12. mkdir project
+13. chmod 755 project
+14. chmod -x notes.txt
 
 ---
 
