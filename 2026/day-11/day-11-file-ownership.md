@@ -1,4 +1,4 @@
-# Day 11 Challenge -- File Ownership (chown & chgrp)
+# Day 11 Challenge - File Ownership (chown & chgrp)
 
 ## Overview
 
