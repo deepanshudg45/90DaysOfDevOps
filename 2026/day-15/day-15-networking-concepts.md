@@ -1,5 +1,3 @@
-# day-15-networking-concepts.md
-
 # Day 15 – Networking Concepts: DNS, IP, Subnets & Ports
 
 ---
@@ -45,7 +43,7 @@ google.com.     300     IN      A       142.250.183.206
 - TTL: 300 seconds  
 
 
-### Screenshot
+### Screenshot:
 
 ![](./images/day15-1.png)
 
@@ -99,7 +97,7 @@ ip addr show
 - 192.168.1.25 → Private IP  
 - 127.0.0.1 → Loopback  
 
-### Screenshot
+### Screenshot:
 
 ![](./images/day15-2.png)
 
@@ -190,7 +188,7 @@ tcp    LISTEN  0       128      0.0.0.0:3306          0.0.0.0:*          users:(
 - Port 22 → SSH is listening  
 - Port 3306 → MySQL is listening
 
-### Screenshot
+### Screenshot:
 
 ![](./images/day15-3.png)
 
