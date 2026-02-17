@@ -1,7 +1,5 @@
 # Day 15 – Networking Concepts: DNS, IP, Subnets & Ports
 
----
-
 # Task 1 – DNS: How Names Become IPs
 
 ## What happens when you type google.com in a browser?
