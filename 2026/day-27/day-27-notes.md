@@ -130,7 +130,6 @@ Removed random frontend practice projects from pinned section.
 ![](./images/day27-4.png)
 
 
-
 # 📸 After Screenshot
 
 ![](./images/day27-1.png)
