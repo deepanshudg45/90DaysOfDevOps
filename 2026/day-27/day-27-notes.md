@@ -123,16 +123,15 @@ Removed random frontend practice projects from pinned section.
 
 ---
 
-# 📸 Before & After
-
-(Insert before screenshot here)
+# 📸 Before Screenshot
 
 ![](./images/day27-1.png)
 ![](./images/day27-2.png)
 ![](./images/day27-4.png)
 
 
-(Insert after screenshot here)
+
+# 📸 After Screenshot
 
 ![](./images/day27-1.png)
 ![](./images/day27-3.png)
