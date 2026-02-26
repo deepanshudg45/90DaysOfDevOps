@@ -228,10 +228,6 @@ sudo docker stop my-nginx
 sudo docker rm my-nginx
 ```
 
-### Screenshot
-
-![docker-rm](screenshots/docker-rm.png)
-
 ---
 
 ## Step 7 – Run Ubuntu in Interactive Mode
@@ -267,10 +263,6 @@ exit
 ```bash
 sudo docker run -d nginx
 ```
-
-### Screenshot
-
-![detached-mode](screenshots/detached-mode.png)
 
 ---
 
