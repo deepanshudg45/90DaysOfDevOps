@@ -111,7 +111,7 @@ docker --version
 
 ### Screenshot
 
-![docker-version](./images/day28-1.png)
+![docker-version](./images/day29-1.png)
 
 ---
 
@@ -132,7 +132,7 @@ What happened:
 
 ### Screenshot
 
-![hello-world-output](./images/day28-2.png)
+![hello-world-output](./images/day29-2.png)
 
 ---
 
@@ -166,7 +166,7 @@ sudo docker ps
 
 ### Screenshot
 
-![nginx-running](./images/day28-3.png)
+![nginx-running](./images/day29-3.png)
 
 ---
 
@@ -178,7 +178,7 @@ http://localhost:8080
 
 ### Screenshot
 
-![nginx-browser](./images/day28-4.png)
+![nginx-browser](./images/day29-4.png)
 
 ---
 
@@ -218,7 +218,7 @@ sudo docker stop my-nginx
 
 ### Screenshot
 
-![docker-stop](./images/day28-7.png)
+![docker-stop](./images/day29-7.png)
 
 ---
 
@@ -252,7 +252,7 @@ exit
 
 ### Screenshot
 
-![ubuntu-interactive](./images/day28-5.png)
+![ubuntu-interactive](./images/day29-5.png)
 
 ---
 
@@ -280,7 +280,7 @@ sudo docker ps
 
 ### Screenshot
 
-![custom-name](./images/day28-6.png)
+![custom-name](./images/day29-6.png)
 
 ---
 
